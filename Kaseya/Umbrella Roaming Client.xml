@@ -83,17 +83,17 @@
                                 <Parameter xsi:type="StringParameter" name="Parameter3" value="True" />
                               </Statement>
                               <Statement name="WriteScriptLogEntry" continueOnFail="false" osType="Windows">
-                                <Parameter xsi:type="StringParameter" name="Comment" value="Running install command: msiexec.exe /i &quot;#vagentconfiguration.agenttempdir#\umbrella\RoamingClient_WIN.msi&quot; /QN ORG_ID=#ORG_ID# ORG_FINGERPRINT=#ORG_FINGERPRINT# USER_ID=#USER_ID# HIDE_UI=#HIDE_UI#" />
+                                <Parameter xsi:type="StringParameter" name="Comment" value="Running install command: msiexec.exe /i &quot;#vagentconfiguration.agenttempdir#\umbrella\Setup.msi&quot; /QN ORG_ID=#ORG_ID# ORG_FINGERPRINT=#ORG_FINGERPRINT# USER_ID=#USER_ID# HIDE_UI=#HIDE_UI#" />
                               </Statement>
                               <If description="">
                                 <Condition name="TestFile">
-                                  <Parameter xsi:type="StringParameter" name="Path" value="#vagentconfiguration.agenttempdir#\umbrella\RoamingClient_WIN.msi" />
+                                  <Parameter xsi:type="StringParameter" name="Path" value="#vagentconfiguration.agenttempdir#\umbrella\Setup.msi" />
                                   <Parameter xsi:type="EnumParameter" name="Condition" value="Exists" />
                                   <Parameter xsi:type="StringParameter" name="Value" value="" />
                                 </Condition>
                                 <Then>
                                   <Statement name="ExecuteShellCommand" continueOnFail="false" osType="Windows">
-                                    <Parameter xsi:type="StringParameter" name="Command" value="msiexec.exe /i &quot;#vagentconfiguration.agenttempdir#\umbrella\RoamingClient_WIN.msi&quot; /QN ORG_ID=#ORG_ID# ORG_FINGERPRINT=#ORG_FINGERPRINT# USER_ID=#USER_ID# HIDE_UI=#HIDE_UI#" />
+                                    <Parameter xsi:type="StringParameter" name="Command" value="msiexec.exe /i &quot;#vagentconfiguration.agenttempdir#\umbrella\Setup.msi&quot; /QN ORG_ID=#ORG_ID# ORG_FINGERPRINT=#ORG_FINGERPRINT# USER_ID=#USER_ID# HIDE_UI=#HIDE_UI#" />
                                     <Parameter xsi:type="EnumParameter" name="ExecuteAccount" value="System" />
                                     <Parameter xsi:type="BooleanParameter" name="Is64Bit" value="False" />
                                   </Statement>
@@ -119,7 +119,7 @@
                                 </Then>
                                 <Else>
                                   <Statement name="WriteScriptLogEntry" continueOnFail="false" osType="Windows">
-                                    <Parameter xsi:type="StringParameter" name="Comment" value="Error: Umbrella zip written and extracted but Roamingclient_WIN.msi not present!" />
+                                    <Parameter xsi:type="StringParameter" name="Comment" value="Error: Umbrella zip written and extracted but Setup.msi not present!" />
                                   </Statement>
                                 </Else>
                               </If>
