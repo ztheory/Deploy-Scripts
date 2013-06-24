@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ScriptExport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.kaseya.com/vsa/2008/12/Scripting">
-  <Procedure name="Umbrella Roaming Client Silent Deployment v1.1" treePres="3" id="2131579044" folderId="984115948986315" treeFullPath="myProcedures - dima@opendns.com">
+  <Procedure name="Umbrella Roaming Client Silent Deployment v1.2" treePres="3" id="643775429" folderId="984115948986315" treeFullPath="myProcedures - dima@opendns.com">
     <Body description="">
-      <Statement description="Umrella Roaming Client Deployment Procedure&#xD;&#xA;v1.1    5-6-2013 &#xD;&#xA;by Dima Kumets, Product Manager, OpenDNS&#xD;&#xA;Variables can be found in the MSP console or in readme.txt inside your roaming agent deploy&#xD;&#xA;ORG_ID=Organization ID (organization unique)&#xD;&#xA;ORG_Fingerprint=Organization Fingerprint (organization unique)&#xD;&#xA;USER_ID=Your User id (MSP unique)&#xD;&#xA;HIDE_UI=(1 or 0)&#xD;&#xA;The following variables must be defined!!!" name="GetVariable" continueOnFail="false">
+      <Statement description="Umrella Roaming Client Deployment Procedure&#xD;&#xA;v1.2    6-24-2013 &#xD;&#xA;by Dima Kumets, Product Manager, OpenDNS&#xD;&#xA;Change log:&#xD;&#xA;1.2 - modified to download the MSI file over the internet instead of requiring a zip in Kaseya&#xD;&#xA;Variables can be found in the MSP console or in readme.txt inside your roaming agent deploy&#xD;&#xA;The following variables must be defined in the script!!!&#xD;&#xA;USER_ID=Your User id (MSP unique)&#xD;&#xA;HIDE_UI=(1 or 0)&#xD;&#xA;The following will be propted at run time&#xD;&#xA;ORG_Fingerprint=Organization Fingerprint (organization unique)&#xD;&#xA;ORG_ID=Organization ID (organization unique)" name="GetVariable" continueOnFail="false">
         <Parameter xsi:type="EnumParameter" name="VariableType" value="ConstantValue" />
         <Parameter xsi:type="StringParameter" name="SourceContent" value="0" />
         <Parameter xsi:type="StringParameter" name="VariableName" value="USER_ID" />
@@ -62,14 +62,14 @@
                           <Statement name="WriteScriptLogEntry" continueOnFail="false" osType="Windows">
                             <Parameter xsi:type="StringParameter" name="Comment" value="Umbrella Roaming Client not detetected. Proceeding with installation..." />
                           </Statement>
-                          <Statement name="WriteFile" continueOnFail="true" osType="Windows">
-                            <Parameter xsi:type="StringParameter" name="Path" value="#vagentconfiguration.agenttempdir#\umbrella.zip" />
-                            <Parameter xsi:type="StringParameter" name="ManagedFile" value="VSASharedFiles\Elliot's Scripts\OpenDNS\Umbrella-WinRoamingClient-20130322.zip" />
-                            <Parameter xsi:type="BooleanParameter" name="DeleteAfter" value="False" />
+                          <Statement name="GetURL" continueOnFail="false" osType="Windows">
+                            <Parameter xsi:type="StringParameter" name="URL" value="http://shared.opendns.com/roaming/enterprise/release/win/production/Setup.msi" />
+                            <Parameter xsi:type="StringParameter" name="ResponseFileName" value="#vagentconfiguration.agenttempdir#\Setup.msi" />
+                            <Parameter xsi:type="BooleanParameter" name="WaitComplete" value="True" />
                           </Statement>
                           <If description="">
                             <Condition name="TestFile">
-                              <Parameter xsi:type="StringParameter" name="Path" value="#vagentconfiguration.agenttempdir#\umbrella.zip" />
+                              <Parameter xsi:type="StringParameter" name="Path" value="#vagentconfiguration.agenttempdir#\Setup.msi" />
                               <Parameter xsi:type="EnumParameter" name="Condition" value="Exists" />
                               <Parameter xsi:type="StringParameter" name="Value" value="" />
                             </Condition>
@@ -77,23 +77,18 @@
                               <Statement name="WriteScriptLogEntry" continueOnFail="false" osType="Windows">
                                 <Parameter xsi:type="StringParameter" name="Comment" value="Umbrella agent written successfully." />
                               </Statement>
-                              <Statement name="Unzip file" continueOnFail="false" osType="Windows">
-                                <Parameter xsi:type="StringParameter" name="Parameter1" value="#vagentconfiguration.agenttempdir#\umbrella.zip" />
-                                <Parameter xsi:type="StringParameter" name="Parameter2" value="#vagentconfiguration.agenttempdir#\umbrella" />
-                                <Parameter xsi:type="StringParameter" name="Parameter3" value="True" />
-                              </Statement>
                               <Statement name="WriteScriptLogEntry" continueOnFail="false" osType="Windows">
-                                <Parameter xsi:type="StringParameter" name="Comment" value="Running install command: msiexec.exe /i &quot;#vagentconfiguration.agenttempdir#\umbrella\Setup.msi&quot; /QN ORG_ID=#ORG_ID# ORG_FINGERPRINT=#ORG_FINGERPRINT# USER_ID=#USER_ID# HIDE_UI=#HIDE_UI#" />
+                                <Parameter xsi:type="StringParameter" name="Comment" value="Running install command: msiexec.exe /i &quot;#vagentconfiguration.agenttempdir#\Setup.msi&quot; /QN ORG_ID=#ORG_ID# ORG_FINGERPRINT=#ORG_FINGERPRINT# USER_ID=#USER_ID# HIDE_UI=#HIDE_UI#" />
                               </Statement>
                               <If description="">
                                 <Condition name="TestFile">
-                                  <Parameter xsi:type="StringParameter" name="Path" value="#vagentconfiguration.agenttempdir#\umbrella\Setup.msi" />
+                                  <Parameter xsi:type="StringParameter" name="Path" value="#vagentconfiguration.agenttempdir#\Setup.msi" />
                                   <Parameter xsi:type="EnumParameter" name="Condition" value="Exists" />
                                   <Parameter xsi:type="StringParameter" name="Value" value="" />
                                 </Condition>
                                 <Then>
                                   <Statement name="ExecuteShellCommand" continueOnFail="false" osType="Windows">
-                                    <Parameter xsi:type="StringParameter" name="Command" value="msiexec.exe /i &quot;#vagentconfiguration.agenttempdir#\umbrella\Setup.msi&quot; /QN ORG_ID=#ORG_ID# ORG_FINGERPRINT=#ORG_FINGERPRINT# USER_ID=#USER_ID# HIDE_UI=#HIDE_UI#" />
+                                    <Parameter xsi:type="StringParameter" name="Command" value="msiexec.exe /i &quot;#vagentconfiguration.agenttempdir#\Setup.msi&quot; /QN ORG_ID=#ORG_ID# ORG_FINGERPRINT=#ORG_FINGERPRINT# USER_ID=#USER_ID# HIDE_UI=#HIDE_UI#" />
                                     <Parameter xsi:type="EnumParameter" name="ExecuteAccount" value="System" />
                                     <Parameter xsi:type="BooleanParameter" name="Is64Bit" value="False" />
                                   </Statement>
@@ -119,7 +114,7 @@
                                 </Then>
                                 <Else>
                                   <Statement name="WriteScriptLogEntry" continueOnFail="false" osType="Windows">
-                                    <Parameter xsi:type="StringParameter" name="Comment" value="Error: Umbrella zip written and extracted but Setup.msi not present!" />
+                                    <Parameter xsi:type="StringParameter" name="Comment" value="Error: Umbrella zip written and extracted but Roamingclient_WIN.msi not present!" />
                                   </Statement>
                                 </Else>
                               </If>
