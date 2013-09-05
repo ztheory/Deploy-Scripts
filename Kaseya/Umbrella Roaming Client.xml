@@ -78,7 +78,7 @@
                                 <Parameter xsi:type="StringParameter" name="Comment" value="Umbrella agent written successfully." />
                               </Statement>
                               <Statement name="WriteScriptLogEntry" continueOnFail="false" osType="Windows">
-                                <Parameter xsi:type="StringParameter" name="Comment" value="Running install command: msiexec.exe /i &quot;#vagentconfiguration.agenttempdir#\Setup.msi&quot; /QN ORG_ID=#ORG_ID# ORG_FINGERPRINT=#ORG_FINGERPRINT# USER_ID=#USER_ID# HIDE_UI=#HIDE_UI#" />
+                                <Parameter xsi:type="StringParameter" name="Comment" value="Running install command: msiexec.exe /i &quot;#vagentconfiguration.agenttempdir#\Setup.msi&quot; /QN ORG_ID=#ORG_ID# ORG_FINGERPRINT=#ORG_FINGERPRINT# USER_ID=#USER_ID# HIDE_UI=#HIDE_UI# HIDE_ARP=#HIDE_UI#" />
                               </Statement>
                               <If description="">
                                 <Condition name="TestFile">
@@ -88,7 +88,7 @@
                                 </Condition>
                                 <Then>
                                   <Statement name="ExecuteShellCommand" continueOnFail="false" osType="Windows">
-                                    <Parameter xsi:type="StringParameter" name="Command" value="msiexec.exe /i &quot;#vagentconfiguration.agenttempdir#\Setup.msi&quot; /QN ORG_ID=#ORG_ID# ORG_FINGERPRINT=#ORG_FINGERPRINT# USER_ID=#USER_ID# HIDE_UI=#HIDE_UI#" />
+                                    <Parameter xsi:type="StringParameter" name="Command" value="msiexec.exe /i &quot;#vagentconfiguration.agenttempdir#\Setup.msi&quot; /QN ORG_ID=#ORG_ID# ORG_FINGERPRINT=#ORG_FINGERPRINT# USER_ID=#USER_ID# HIDE_UI=#HIDE_UI# HIDE_ARP=#HIDE_UI#" />
                                     <Parameter xsi:type="EnumParameter" name="ExecuteAccount" value="System" />
                                     <Parameter xsi:type="BooleanParameter" name="Is64Bit" value="False" />
                                   </Statement>
