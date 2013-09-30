@@ -1,2 +1,45 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?><LabTech_Expansion Version="1" Name="LabTech Script Expansion" Type="PackedScript"><PackedScript><NewDataSet><Table><ScriptId>5768</ScriptId><FolderId>189</FolderId><ScriptName>OpenDNS Umbrella Roaming Agent</ScriptName><ScriptNotes>Modified script for Umbrella Roaming agent deplot
-</ScriptNotes><Permission>1,2,4,5,</Permission><EditPermission>1,4,5,</EditPermission><ComputerScript>1</ComputerScript><LocationScript>1</LocationScript><MaintenanceScript>0</MaintenanceScript><FunctionScript>0</FunctionScript><LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffTefLfNmll2P0qf5NF9M8jrdeTBK93Z2d9O9R/d2Hu08SF9+8fiu987j19O6WLU/mddNUS0BPPxAv/98XcyOds/3DnY/nd3bnu3fz7Z3d/O97Wx673x7d+/e7r3znd1Pp3sT8z6/8PiuP6TfOPl/AM9ePVHiAAAA</LicenseData><ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5nVz9NXr01dnT3//Z6++/OL3P/nyxbOzz3//Z2fPT0dfvvo89vGzsxefn756+ersxZvel4/venC1p8/LapKVXteC4k9Sk6JaHu3uPXz4YGfv0wc7j++G3wTNP18Xs6Pd872D3U9n97Zn+/ez7d3dfG87m947397du7d773xn99Pp3sRA4ReYJPpB4xPodZuvLIbH05YxeXxXf9PPn62X/PfZDN95f/k03O3QdK/z973O3/udv+97hKnq9ghkwE/97KRatsVyneNz+7t+92XzvFgU/Ir5Vb85W87yZZvxYOhb/0+fJI4KG8iyt4ks9x4OE+boW3jSs/N0WbVpln63WM6qqyb98vUoPX1XtKn0qTyz+3NNxd1Pf+7IuLeBjBv56/0ps/v/Lcp8uoG/Fm9nRZ3+7lfEV0X9u/++ZdtcTn/fRoT9Z4Wr9gZot/t1ZXP3Z5N0m0Rz3rarR3fvNvOszmfjapUvZ8tmPK0Wd+sqWxTLi7uEVF6v6qLJ79Z5mWf0kwh9d1VXszXDvPs6b9er8aIp4rQ+ik/M79t9bS+cElBMf3ufqbn3/6mp2d3fMDe3pBuT2yO3oVuXno/Olk2bleWz4t2ZUbbvR9v991cZP3e03aRKbyRtep4VZT5L2yolU7Usq2w2ZltFEpFK6/F4/LOiW+7/f4nI+5vU8u8+LQvqtpj97kOKgfTMak3qxTXpMu3vjjFn0/Z0QRNiGnW49uhLUltPX7xOv1pMSEWVWfpKdFd6fEH9p8/sXBYiAWm1TAmw9P2C3NTffZz++LPjs+dfvTKe6344R0cDoA1AYYl0Wq3LGXs5k9wyjnTd7U/7uR/M/adfe+5/DuZ+o7NitdA3KxwPvmkC/az6LBud4pg6/maJdfD/KWJtdPCaIn+XT9O7RTp99PtCd1P8MKi77/6iZUox6+9/9vSz3zMeu/6e/L0XwH72e26KZn/PFKExwxuIkX/P9NtnT09//6/OPtv9WZnKhzd5Ne87lT+bimGjXjC6WvTnPGtIVeZLo0jJB/1Zod/uzjctCz+bBPx/qVU9+fKLl89P35w+7dvP9Mdff3Vycvr69YD57MHS+WbieYBvayh3v0b0+sHzaf7WJNv/Aymvq1ZzEwAA</ScriptData><ScriptVersion>1299702670</ScriptVersion><ScriptGuid>1f2816d3-d45a-11e2-ac3f-12313f016c2b</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters>USERID_FROM_CONFIG_FILE,ORGID_FROM_CONFIG_FILE,FINGERPRINT_FROM_CONFIG_FILE</Parameters></Table></NewDataSet><ScriptFolder><NewDataSet><Table><FolderID>189</FolderID><ParentID>1</ParentID><Name>Umbrella by OpenDNS</Name></Table></NewDataSet></ScriptFolder><ScriptFolder><NewDataSet><Table><FolderID>1</FolderID><ParentID>0</ParentID><Name>Software</Name></Table></NewDataSet></ScriptFolder></PackedScript></LabTech_Expansion>
+﻿<LabTech_Expansion
+	Version="60.239"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>5828</ScriptId>
+				<FolderId>199</FolderId>
+				<ScriptName>OpenDNS Umbrella Agent Deploy</ScriptName>
+				<ScriptNotes>Script for Umbrella Roaming agent deployment</ScriptNotes>
+				<Permission>1,2,4,5,</Permission>
+				<EditPermission>1,4,5,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>1</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffTefLfNmll2P0qf5NF9M8jrdeTBK93Z2d9O9R/d2Hu08SF9+8fiu987j19O6WLU/mddNUS0BPPxAv/98XcyO9rK9yYN7s93tgwf7n27v7uZ72w/zBzvbOzu79+/P9g52qCPzPr/w+K4/pN84+X8ARr8E6+IAAAA=</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5nVz9NXr01dnT3//Z6++/OL3P/nyxbOzz3//Z2fPT0dfvvo89vGzsxefn756+ersxZvel4/venC1p8/LapKVXteC4k9Sk6JaHu3uPXz4YGfv0wc7j++G3wTNP18Xs6O9bG/y4N5sd/vgwf6n27u7+d72w/zBzvbOzu79+7O9g529nV0DhV9gkugHjU+g122+shgeT1vG5PFd/U0/f7Ze8t9nM3zn/eXTcLdD073O3/c6f+93/r7vEaaq2yOQAT/1s5Nq2RbLdY7P7e/63ZfN82JR8CvmV/3mbDnLl23Gg6Fv/T99kjgqbCDL3iay3Hs4TJijb+FJz87TZdWmWfrdYjmrrpr0y9ej9PRd0abSp/LM7s81FXc//bkj494GMm7kr/enzO7/tyjz6Qb+WrydFXX6u18RXxX17/77lm1zOf19GxH2nxWu2hug3e7Xlc3dn03SbRLNeduuHt2928yzOp+Nq1W+nC2b8bRa3K2rbFEsL+4SUnm9qosmv1vnZZ7RTyL03VVdzdYM8+7rvF2vxoumiNP6KD4xv2/3tb1wSkAx/e19pube/6emZnd/w9zckm5Mbo/chm5dej46WzZtVpbPindnRtm+H233319l/NzRdpMqvZG06XlWlPksbauUTNWyrLLZmG0VSUQqrcfj8c+Kbrn//yUi729Sy7/7tCyo22L2uw8pBtIzqzWpF9eky7S/O8acTdvTBU2IadTh2qOvFhNSTWWWvhKdlZ5wx+kzO4mFsH5aLVOCKJ2+IP/0dx+nP/7s+Oz5V6+My7ofTs4gbIXINE0VRAS8Qr0fTPGn3/wU/+xN8UafxCqbb1YGHnzTBPpZdU02+r4xrfvNEuvg/1PE2ujHNUX+Lp+md4sBZ+73VSEUGfz9v3v2gpX13V+0TClI/f3Pnn72e8aD1d+Tv/ci1s9+z03h6++ZIhZmeANB8e+Zfvvs6env/9XZZ7vy2/Grl5/t/qzM78PbeDTvM78/mwZho7L4ktzLpy9ep8cX0KDzrEkneb40qpT8z58V+u1+jRjw546A/++2qCdffvHy+emb06d9U5f++OuvTk5OX7/+EEPq4JPRvo0p3f0aYewHT675W7Nt/w+DsKPwfBMAAA==</ScriptData>
+				<ScriptVersion>1299702670</ScriptVersion>
+				<ScriptGuid>2a2b73d1-8746-11e2-9e70-00155d280201</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters>USERID_FROM_CONFIG_FILE,ORGID_FROM_CONFIG_FILE,FINGERPRINT_FROM_CONFIG_FILE</Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>199</FolderID>
+					<ParentID>1</ParentID>
+					<Name>Umbrella by OpenDNS</Name>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>1</FolderID>
+					<ParentID>0</ParentID>
+					<Name>Software</Name>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>
