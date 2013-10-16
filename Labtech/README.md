@@ -1,6 +1,9 @@
-Current versions do not support deploying to Mac OS X.
-
-Pseudocode below. Please note that the username is at the top of the MSP Console->Roaming Agent->Deploy  page
+Download instructions:
+  Click on the deploy script.
+  Switch to "Raw" mode in the view window
+  Save the file from your browser
+  
+Code/description below. Please note that the username is at the top of the MSP Console->Roaming Agent->Deploy  page
 
 Description/output of visual
 
