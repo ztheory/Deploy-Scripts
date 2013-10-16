@@ -1,7 +1,6 @@
 Current versions do not support deploying to Mac OS X.
 
-
-The unpacked versions of these script were generated using the LabTechXML.py script and are here for descriptive/educational purposes only, you should not attempt to import them into LabTech.
+Pseudocode below. Please note that the username is at the top of the MSP Console->Roaming Agent->Deploy  page
 
 Description/output of visual
 
