@@ -1,32 +1,26 @@
-Download instructions:
-  Click on the deploy script.
-  Switch to "Raw" mode in the view window
-  Save the file from your browser
-  
-Code/description below. Please note that the username is at the top of the MSP Console->Roaming Agent->Deploy  page
+Download
+---------------------
+Get the latest script [here](https://raw.github.com/opendns/Deploy-Scripts/master/Labtech/OpenDNS%20Umbrella%20Roaming%20Agent.xml).
 
-Description/output of visual
+Notes
+-----
 
-1	Note: ***** If not a Windows OS, Exit Script	Exit On Failure	Non Windows OS
+This script deploys the roaming client for **Windows only**.
+There is currently no support for any other operating system. 
+The script will simply exit if run on OS X or Linux.
 
-2	Exit Script	Exit On Failure	Non Windows OS
+The following variables must be set ahead of time:
+  * `ORGID_FROM_CONFIG_FILE`
+  * `FINGERPRINT_FROM_CONFIG_FILE`
+  * `USERID_FROM_CONFIG_FILE`
 
-3	   SHELL:  mkdir %windir%\ltsvc\scripts and store the result in %shellresult%	Continue On Failure	All Operating Systems
+Their values can be retrieved from the [MSP Console->Roaming Agent->Deploy](https://dashboard2.opendns.com/msp#roamingclient/deploy) page
 
-4	   DOWNLOAD:  http://shared.opendns.com/roaming/enterprise/release/win/production/Setup.msi  saved to  %windir%\ltsvc\scripts\Setup.msi  and wait until finish.	Continue On Failure	All Operating Systems
+What the script does
+--------------------
 
-5	   IF FILE Exists  %windir%\ltsvc\scripts\Setup.msi  THEN  Jump to :InstallFixIt	Exit On Failure	All Operating Systems
-
-6	   LOG:  %windir%\ltsvc\scripts\Setup.msi failed to download. Exiting script...	Exit On Failure	All Operating Systems
-
-7	   Create New Ticket for %clientid%\%computerid% Email:%ContactEmail% Subject:Umbrella Roaming Client Failed to install on %ComputerName%. #FAILURE	Exit On Failure	All Operating Systems
-
-8	Exit Script	Exit On Failure	All Operating Systems
-
-9	:InstallFixIt - Label	Exit On Failure	All Operating Systems
-
-10	   SHELL:  msiexec /i %windir%\ltsvc\scripts\Setup.msi /qn ORG_ID=@ORGID_FROM_CONFIG_FILE@ ORG_FINGERPRINT=@FINGERPRINT_FROM_CONFIG_FILE@ USER_ID=@USERID_FROM_CONFIG_FILE@ HIDE_UI=1 HIDE_ARP=1 and store the result in %shellresult%	Continue On Failure	All Operating Systems
-
-11	   LOG:  OpenDNS Agent has been installed.	Exit On Failure	All Operating Systems
-
-12	   Create New Ticket for %clientid%\%computerid% Email:%ContactEmail% Subject:Umbrella Roaming Client COMPLETED on %ComputerName% #SUCCESS	Exit On Failure	All Operating Systems
+1. Make the `%windir%\ltsvc\scripts` folder
+2. Download the [Roaming Client msi](http://shared.opendns.com/roaming/enterprise/release/win/production/Setup.msi) to the above folder
+3. If the file is unable to be download, open a ticket
+4. Use `msiexec` to install the downloaded MSI file silently and with no UI.
+5. Open a ticket documentating that the roaming client has been installed.
