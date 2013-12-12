@@ -1,12 +1,12 @@
-<LabTech_Expansion
+﻿<LabTech_Expansion
 	Version="60.239"
 	Name="LabTech Script Expansion"
 	Type="PackedScript">
 	<PackedScript>
 		<NewDataSet>
 			<Table>
-				<ScriptId></ScriptId>
-				<FolderId>188</FolderId>
+				<ScriptId>5762</ScriptId>
+				<FolderId>191</FolderId>
 				<ScriptName>Deploy Umbrella Agent</ScriptName>
 				<ScriptNotes>Script for Umbrella Roaming agent deployment</ScriptNotes>
 				<Permission>0,</Permission>
@@ -16,9 +16,9 @@
 				<MaintenanceScript>0</MaintenanceScript>
 				<FunctionScript>0</FunctionScript>
 				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffTefLfNmll2P0qf5NF9M8jrdeTBK93Z2d9O9R/d2Hu08SF9+8fiu987j19O6WLU/mddNUS0BPPxAv/98XcyO9rK9yYN7s93tgwf7n27v7uZ72w/zBzvbOzu79+/P9g52qCPzPr/w+K4/pN84+X8ARr8E6+IAAAA=</LicenseData>
-				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5nVz9NXr01dnT3//Z6++/OL3P/nyxbOzz3//Z2fPT0dfvvo89vGzsxefn756+ersxZvel4/venC1p8/LapKVXteC4k9Sk6JaHu3uPXz4YGfv0wc7j++G3wTNP18Xs6O9bG/y4N5sd/vgwf6n27u7+d72w/zBzvbOzu79+7O9g529nV0DhV9gkugHjU+g122+shgeT1vG5PFd/U0/f7Ze8t9nM3zn/eXTcLdD073O3/c6f+93/r7vEaaq2yOQAT/1s5Nq2RbLdY7P7e/63ZfN82JR8CvmV/3mbDnLl23Gg6Fv/T99kjgqbCDL3iay3Hs4TJijb+FJz87TZdWmWfrdYjmrrpr0y9ej9PRd0abSp/LM7s81FXc//bkj494GMm7kr/enzO7/tyjz6Qb+WrydFXX6u18RXxX17/77lm1zOf19GxH2nxWu2hug3e7Xlc3dn03SbRLNeduuHt2928yzOp+Nq1W+nC2b8bRa3K2rbFEsL+4SUnm9qosmv1vnZZ7RTyL03VVdzdYM8+7rvF2vxoumiNP6KD4xv2/3tb1wSkAx/e19pube/6emZnd/w9zckm5Mbo/chm5dej46WzZtVpbPindnRtm+H233319l/NzRdpMqvZG06XlWlPksbauUTNWyrLLZmG0VSUQqrcfj8c+Kbrn//yUi729Sy7/7tCyo22L2uw8pBtIzqzWpF9eky7S/O8acTdvTBU2IadTh2qOvFhNSTWWWvhKdlZ5wx+kzO4mFsH5aLVOCKJ2+IP/0dx+nP/7s+Oz5V6+My7ofTs4gbIXINE0VRAS8Qr0fTPGn3/wU/+xN8UafxCqbb1YGHnzTBPpZdU02+r4xrfvNEuvg/1PE2ujHNUX+Lp+md4sBZ85T0Hd/0TKlwPT3P3v62e8ZD1B/T/7ei1I/+z03hay/Z4r4l+ENBMK/Z/rts6env/9XZ5/tym/Hr15+tvuzMqcP39eL+bk0AhsVxJfkUj598To9voDWnGdNOsnzpVGf5HP+rNBv92vEfT93BPx/txU9+fKLl89P35w+7Zu39Mdff3Vycvr69YcYTwefDPVtzOfu1whdP3hyzd+aYft/ANBaPG1wEwAA</ScriptData>
-				<ScriptVersion>1</ScriptVersion>
-				<ScriptGuid>7b7b6ae5-c54c-4b07-831d-c9404ea078c8</ScriptGuid>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5nVz9NXr01dnT3//Z6++/OL3P/nyxbOzz3//Z2fPT0dfvvo89vGzsxefn756+ersxZvel4/venC1p8/LapKVXteC4k9Sk6JaHu3uPXz4YGfv0wc7j++G3wTNP18Xs6O9bG/y4N5sd/vgwf6n27u7+d72w/zBzvbOzu79+7O9g529nV0DhV9gkugHjU+g122+shgeT1vG5PFd/U0/f7Ze8t9nM3zn/eXTcLdD073O3/c6f+93/r7vEaaq2yOQAT/1s5Nq2RbLdY7P7e/63ZfN82JR8CvmV/3mbDnLl23Gg6Fv/T99kjgqbCDL3iay3Hs4TJijb+FJz87TZdWmWfrdYjmrrpr0y9ej9PRd0abSp/LM7s81FXc//bkj494GMm7kr/enzO7/tyizib/mbbt6dPduM8/qfDauVvlytmzG02pxt66yRbG8uEtI5fWqLpr8bp2XeUY/r4rl3VVdzdYM8+7rvF2vxoumiLPh0e/e5ovVrKh/99/3q8WEYJRZ9429kFFBDv3tfaZlb2Badr+u2O/+bM7K7v6GabmZZF0iG5J1SfnobNm0WVk+K96dGT3xfmS99/7c/nNH1k1a4Oh3J8ZlopZtczn9fRuxab+vJW16nhVlPkvbKiUtuyyrbDZmNUtykErr8Xj8s6Js9/+/ROT9TzcReVoW1G0x+92H1AFpl9WalIpr0mXa3x1jzqbt6YImxDTqcO2RkYz0lWiq9IQ7Tp/ZSSyE9dNqmRJE6fQFuVa/+zj98WfHZ8+/emW8rf1wcgZhK0SmaaogIuAV6v1giu//f2mKN5pTq2y+WRn49Jsm0O2s6tck0Ea3LaZ1v1liPfj/FLH2NmkM0rz5u3ya3i3SDXYvvfuLlinFU7//2dPPfs94XPV78vdecPXZ77kp0vo9U4RtDG8gfvs902+fPT39/b86+2xXfjt+9fKz3Z+V+Tz4/5LzslE5fElO5NMXr9PjC2jMedakkzxfGtVJXubPCv0efm15+Dmg3/+7DejJl1+8fH765vRp37KlP/76q5OT09evP8RuOvhko29jOXe/Rij6wcJh/ta80P8D+euQsiYSAAA=</ScriptData>
+				<ScriptVersion>1299702670</ScriptVersion>
+				<ScriptGuid>2a2b73d1-8746-11e2-9e70-00155d280201</ScriptGuid>
 				<ScriptFlags>4</ScriptFlags>
 				<Parameters>USERID_FROM_CONFIG_FILE,ORGID_FROM_CONFIG_FILE,FINGERPRINT_FROM_CONFIG_FILE</Parameters>
 			</Table>
@@ -26,7 +26,7 @@
 		<ScriptFolder>
 			<NewDataSet>
 				<Table>
-					<FolderID>188</FolderID>
+					<FolderID>191</FolderID>
 					<ParentID>1</ParentID>
 					<Name>Umbrella by OpenDNS</Name>
 				</Table>
