@@ -24,3 +24,8 @@ What the script does
 3. If the file is unable to be download, open a ticket
 4. Use `msiexec` to install the downloaded MSI file silently and with no UI.
 5. Open a ticket documentating that the roaming client has been installed.
+
+Warning
+--------------------
+
+Renaming the file from Setup.msi or changing the path of the file will likely result in a failed installation. In order for the Roaming Client to function correctly, it must be installed as Setup.msi
